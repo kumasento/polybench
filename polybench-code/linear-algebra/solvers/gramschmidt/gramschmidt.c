@@ -19,7 +19,7 @@ void init_array(int m, int n,
 		DATA_TYPE POLYBENCH_2D(R,N,N,n,n),
 		DATA_TYPE POLYBENCH_2D(Q,M,N,m,n))
 {
-  int i, j;
+  long long i, j;
 
   for (i = 0; i < m; i++)
     for (j = 0; j < n; j++) {
@@ -40,7 +40,7 @@ void print_array(int m, int n,
 		 DATA_TYPE POLYBENCH_2D(R,N,N,n,n),
 		 DATA_TYPE POLYBENCH_2D(Q,M,N,m,n))
 {
-  int i, j;
+  long long i, j;
 
   POLYBENCH_DUMP_START;
   POLYBENCH_DUMP_BEGIN("R");
@@ -72,7 +72,7 @@ void kernel_gramschmidt(int m, int n,
 			DATA_TYPE POLYBENCH_2D(R,N,N,n,n),
 			DATA_TYPE POLYBENCH_2D(Q,M,N,m,n))
 {
-  int i, j, k;
+  long long i, j, k;
 
   DATA_TYPE nrm;
 

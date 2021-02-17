@@ -27,7 +27,7 @@ void init_array (int n,
 		 DATA_TYPE POLYBENCH_1D(y,N,n),
 		 DATA_TYPE POLYBENCH_1D(z,N,n))
 {
-  int i, j;
+  long long i, j;
 
   *alpha = 1.5;
   *beta = 1.2;
@@ -56,7 +56,7 @@ static
 void print_array(int n,
 		 DATA_TYPE POLYBENCH_1D(w,N,n))
 {
-  int i;
+  long long i;
 
   POLYBENCH_DUMP_START;
   POLYBENCH_DUMP_BEGIN("w");
@@ -85,7 +85,7 @@ void kernel_gemver(int n,
 		   DATA_TYPE POLYBENCH_1D(y,N,n),
 		   DATA_TYPE POLYBENCH_1D(z,N,n))
 {
-  int i, j;
+  long long i, j;
 
 #pragma scop
 

@@ -20,7 +20,7 @@ void init_array(int ni, int nj, int nk, int nl, int nm,
 		DATA_TYPE POLYBENCH_2D(C,NJ,NM,nj,nm),
 		DATA_TYPE POLYBENCH_2D(D,NM,NL,nm,nl))
 {
-  int i, j;
+  long long i, j;
 
   for (i = 0; i < ni; i++)
     for (j = 0; j < nk; j++)
@@ -43,7 +43,7 @@ static
 void print_array(int ni, int nl,
 		 DATA_TYPE POLYBENCH_2D(G,NI,NL,ni,nl))
 {
-  int i, j;
+  long long i, j;
 
   POLYBENCH_DUMP_START;
   POLYBENCH_DUMP_BEGIN("G");
@@ -69,7 +69,7 @@ void kernel_3mm(int ni, int nj, int nk, int nl, int nm,
 		DATA_TYPE POLYBENCH_2D(D,NM,NL,nm,nl),
 		DATA_TYPE POLYBENCH_2D(G,NI,NL,ni,nl))
 {
-  int i, j, k;
+  long long i, j, k;
 
 #pragma scop
   /* E := A*B */

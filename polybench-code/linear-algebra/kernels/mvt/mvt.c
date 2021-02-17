@@ -21,7 +21,7 @@ void init_array(int n,
 		DATA_TYPE POLYBENCH_1D(y_2,N,n),
 		DATA_TYPE POLYBENCH_2D(A,N,N,n,n))
 {
-  int i, j;
+  long long i, j;
 
   for (i = 0; i < n; i++)
     {
@@ -43,7 +43,7 @@ void print_array(int n,
 		 DATA_TYPE POLYBENCH_1D(x2,N,n))
 
 {
-  int i;
+  long long i;
 
   POLYBENCH_DUMP_START;
   POLYBENCH_DUMP_BEGIN("x1");
@@ -73,7 +73,7 @@ void kernel_mvt(int n,
 		DATA_TYPE POLYBENCH_1D(y_2,N,n),
 		DATA_TYPE POLYBENCH_2D(A,N,N,n,n))
 {
-  int i, j;
+  long long i, j;
 
 #pragma scop
   for (i = 0; i < _PB_N; i++)

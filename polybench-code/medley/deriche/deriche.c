@@ -18,7 +18,7 @@ void init_array (int w, int h, DATA_TYPE* alpha,
 		 DATA_TYPE POLYBENCH_2D(imgIn,W,H,w,h),
 		 DATA_TYPE POLYBENCH_2D(imgOut,W,H,w,h))
 {
-  int i, j;
+  long long i, j;
 
   *alpha=0.25; //parameter of the filter
 
@@ -36,7 +36,7 @@ void print_array(int w, int h,
 		 DATA_TYPE POLYBENCH_2D(imgOut,W,H,w,h))
 
 {
-  int i, j;
+  long long i, j;
 
   POLYBENCH_DUMP_START;
   POLYBENCH_DUMP_BEGIN("imgOut");
@@ -60,7 +60,7 @@ void kernel_deriche(int w, int h, DATA_TYPE alpha,
        DATA_TYPE POLYBENCH_2D(imgOut, W, H, w, h),
        DATA_TYPE POLYBENCH_2D(y1, W, H, w, h),
        DATA_TYPE POLYBENCH_2D(y2, W, H, w, h)) {
-    int i,j;
+    long long i,j;
     DATA_TYPE xm1, tm1, ym1, ym2;
     DATA_TYPE xp1, xp2;
     DATA_TYPE tp1, tp2;

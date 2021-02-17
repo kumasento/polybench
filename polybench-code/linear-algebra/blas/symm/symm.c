@@ -21,7 +21,7 @@ void init_array(int m, int n,
 		DATA_TYPE POLYBENCH_2D(A,M,M,m,m),
 		DATA_TYPE POLYBENCH_2D(B,M,N,m,n))
 {
-  int i, j;
+  long long i, j;
 
   *alpha = 1.5;
   *beta = 1.2;
@@ -45,7 +45,7 @@ static
 void print_array(int m, int n,
 		 DATA_TYPE POLYBENCH_2D(C,M,N,m,n))
 {
-  int i, j;
+  long long i, j;
 
   POLYBENCH_DUMP_START;
   POLYBENCH_DUMP_BEGIN("C");
@@ -69,7 +69,7 @@ void kernel_symm(int m, int n,
 		 DATA_TYPE POLYBENCH_2D(A,M,M,m,m),
 		 DATA_TYPE POLYBENCH_2D(B,M,N,m,n))
 {
-  int i, j, k;
+  long long i, j, k;
   DATA_TYPE temp2;
 
 //BLAS PARAMS

@@ -18,7 +18,7 @@ void init_array(int nr, int nq, int np,
 		DATA_TYPE POLYBENCH_3D(A,NR,NQ,NP,nr,nq,np),
 		DATA_TYPE POLYBENCH_2D(C4,NP,NP,np,np))
 {
-  int i, j, k;
+  long long i, j, k;
 
   for (i = 0; i < nr; i++)
     for (j = 0; j < nq; j++)
@@ -36,7 +36,7 @@ static
 void print_array(int nr, int nq, int np,
 		 DATA_TYPE POLYBENCH_3D(A,NR,NQ,NP,nr,nq,np))
 {
-  int i, j, k;
+  long long i, j, k;
 
   POLYBENCH_DUMP_START;
   POLYBENCH_DUMP_BEGIN("A");

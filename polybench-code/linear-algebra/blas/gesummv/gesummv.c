@@ -21,7 +21,7 @@ void init_array(int n,
 		DATA_TYPE POLYBENCH_2D(B,N,N,n,n),
 		DATA_TYPE POLYBENCH_1D(x,N,n))
 {
-  int i, j;
+  long long i, j;
 
   *alpha = 1.5;
   *beta = 1.2;
@@ -43,7 +43,7 @@ void print_array(int n,
 		 DATA_TYPE POLYBENCH_1D(y,N,n))
 
 {
-  int i;
+  long long i;
 
   POLYBENCH_DUMP_START;
   POLYBENCH_DUMP_BEGIN("y");
@@ -68,7 +68,7 @@ void kernel_gesummv(int n,
 		    DATA_TYPE POLYBENCH_1D(x,N,n),
 		    DATA_TYPE POLYBENCH_1D(y,N,n))
 {
-  int i, j;
+  long long i, j;
 
 #pragma scop
   for (i = 0; i < _PB_N; i++)

@@ -21,7 +21,7 @@ void init_array(int ni, int nj, int nk,
 		DATA_TYPE POLYBENCH_2D(A,NI,NK,ni,nk),
 		DATA_TYPE POLYBENCH_2D(B,NK,NJ,nk,nj))
 {
-  int i, j;
+  long long i, j;
 
   *alpha = 1.5;
   *beta = 1.2;
@@ -43,7 +43,7 @@ static
 void print_array(int ni, int nj,
 		 DATA_TYPE POLYBENCH_2D(C,NI,NJ,ni,nj))
 {
-  int i, j;
+  long long i, j;
 
   POLYBENCH_DUMP_START;
   POLYBENCH_DUMP_BEGIN("C");
@@ -67,7 +67,7 @@ void kernel_gemm(int ni, int nj, int nk,
 		 DATA_TYPE POLYBENCH_2D(A,NI,NK,ni,nk),
 		 DATA_TYPE POLYBENCH_2D(B,NK,NJ,nk,nj))
 {
-  int i, j, k;
+  long long i, j, k;
 
 //BLAS PARAMS
 //TRANSA = 'N'

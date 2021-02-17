@@ -17,7 +17,7 @@ static
 void init_array (int n,
 		 DATA_TYPE POLYBENCH_2D(path,N,N,n,n))
 {
-  int i, j;
+  long long i, j;
 
   for (i = 0; i < n; i++)
     for (j = 0; j < n; j++) {
@@ -35,7 +35,7 @@ void print_array(int n,
 		 DATA_TYPE POLYBENCH_2D(path,N,N,n,n))
 
 {
-  int i, j;
+  long long i, j;
 
   POLYBENCH_DUMP_START;
   POLYBENCH_DUMP_BEGIN("path");
@@ -55,7 +55,7 @@ static
 void kernel_floyd_warshall(int n,
 			   DATA_TYPE POLYBENCH_2D(path,N,N,n,n))
 {
-  int i, j, k;
+  long long i, j, k;
 
 #pragma scop
   for (k = 0; k < _PB_N; k++)

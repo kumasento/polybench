@@ -17,7 +17,7 @@ static
 void init_array (int n,
 		 DATA_TYPE POLYBENCH_2D(A,N,N,n,n))
 {
-  int i, j;
+  long long i, j;
 
   for (i = 0; i < n; i++)
     {
@@ -55,7 +55,7 @@ void print_array(int n,
 		 DATA_TYPE POLYBENCH_2D(A,N,N,n,n))
 
 {
-  int i, j;
+  long long i, j;
 
   POLYBENCH_DUMP_START;
   POLYBENCH_DUMP_BEGIN("A");
@@ -75,7 +75,7 @@ static
 void kernel_lu(int n,
 	       DATA_TYPE POLYBENCH_2D(A,N,N,n,n))
 {
-  int i, j, k;
+  long long i, j, k;
 
 #pragma scop
   for (i = 0; i < _PB_N; i++) {

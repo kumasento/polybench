@@ -19,7 +19,7 @@ void init_array (int m, int n,
 		 DATA_TYPE POLYBENCH_1D(r,N,n),
 		 DATA_TYPE POLYBENCH_1D(p,M,m))
 {
-  int i, j;
+  long long i, j;
 
   for (i = 0; i < m; i++)
     p[i] = (DATA_TYPE)(i % m) / m;
@@ -39,7 +39,7 @@ void print_array(int m, int n,
 		 DATA_TYPE POLYBENCH_1D(q,N,n))
 
 {
-  int i;
+  long long i;
 
   POLYBENCH_DUMP_START;
   POLYBENCH_DUMP_BEGIN("s");
@@ -68,7 +68,7 @@ void kernel_bicg(int m, int n,
 		 DATA_TYPE POLYBENCH_1D(p,M,m),
 		 DATA_TYPE POLYBENCH_1D(r,N,n))
 {
-  int i, j;
+  long long i, j;
 
 #pragma scop
   for (i = 0; i < _PB_M; i++)

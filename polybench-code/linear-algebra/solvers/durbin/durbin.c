@@ -17,7 +17,7 @@ static
 void init_array (int n,
 		 DATA_TYPE POLYBENCH_1D(r,N,n))
 {
-  int i, j;
+  long long i, j;
 
   for (i = 0; i < n; i++)
     {
@@ -33,7 +33,7 @@ void print_array(int n,
 		 DATA_TYPE POLYBENCH_1D(y,N,n))
 
 {
-  int i;
+  long long i;
 
   POLYBENCH_DUMP_START;
   POLYBENCH_DUMP_BEGIN("y");
@@ -58,7 +58,7 @@ void kernel_durbin(int n,
  DATA_TYPE beta;
  DATA_TYPE sum;
 
- int i,k;
+ long long i,k;
 
 #pragma scop
  y[0] = -r[0];

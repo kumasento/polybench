@@ -22,7 +22,7 @@ void init_array(int ni, int nj, int nk, int nl,
 		DATA_TYPE POLYBENCH_2D(C,NJ,NL,nj,nl),
 		DATA_TYPE POLYBENCH_2D(D,NI,NL,ni,nl))
 {
-  int i, j;
+  long long i, j;
 
   *alpha = 1.5;
   *beta = 1.2;
@@ -47,7 +47,7 @@ static
 void print_array(int ni, int nl,
 		 DATA_TYPE POLYBENCH_2D(D,NI,NL,ni,nl))
 {
-  int i, j;
+  long long i, j;
 
   POLYBENCH_DUMP_START;
   POLYBENCH_DUMP_BEGIN("D");
@@ -73,7 +73,7 @@ void kernel_2mm(int ni, int nj, int nk, int nl,
 		DATA_TYPE POLYBENCH_2D(C,NJ,NL,nj,nl),
 		DATA_TYPE POLYBENCH_2D(D,NI,NL,ni,nl))
 {
-  int i, j, k;
+  long long i, j, k;
 
 #pragma scop
   /* D := alpha*A*B*C + beta*D */

@@ -18,7 +18,7 @@ void init_array (int m, int n,
 		 DATA_TYPE *float_n,
 		 DATA_TYPE POLYBENCH_2D(data,N,M,n,m))
 {
-  int i, j;
+  long long i, j;
 
   *float_n = (DATA_TYPE)n;
 
@@ -35,7 +35,7 @@ void print_array(int m,
 		 DATA_TYPE POLYBENCH_2D(cov,M,M,m,m))
 
 {
-  int i, j;
+  long long i, j;
 
   POLYBENCH_DUMP_START;
   POLYBENCH_DUMP_BEGIN("cov");
@@ -58,7 +58,7 @@ void kernel_covariance(int m, int n,
 		       DATA_TYPE POLYBENCH_2D(cov,M,M,m,m),
 		       DATA_TYPE POLYBENCH_1D(mean,M,m))
 {
-  int i, j, k;
+  long long i, j, k;
 
 #pragma scop
   for (j = 0; j < _PB_M; j++)

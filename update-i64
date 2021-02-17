@@ -1,0 +1,17 @@
+#!/bin/bash
+
+FILES="$(find polybench-code -type f -name "*.c" -not -wholename "*/utilities/*")"
+
+for f in ${FILES}; do
+  echo "${f}"
+
+  if [ "${f}" = "Nussinov.orig.c" ]; then
+    continue
+  fi
+
+  if grep -q "int i" "${f}"; then
+    sed -i 's/int i/long long i/' "${f}"
+  fi
+
+done
+

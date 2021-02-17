@@ -18,7 +18,7 @@ void init_array (int n,
 		 DATA_TYPE POLYBENCH_1D(A,N,n),
 		 DATA_TYPE POLYBENCH_1D(B,N,n))
 {
-  int i;
+  long long i;
 
   for (i = 0; i < n; i++)
       {
@@ -35,7 +35,7 @@ void print_array(int n,
 		 DATA_TYPE POLYBENCH_1D(A,N,n))
 
 {
-  int i;
+  long long i;
 
   POLYBENCH_DUMP_START;
   POLYBENCH_DUMP_BEGIN("A");

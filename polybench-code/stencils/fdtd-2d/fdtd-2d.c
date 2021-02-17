@@ -22,7 +22,7 @@ void init_array (int tmax,
 		 DATA_TYPE POLYBENCH_2D(hz,NX,NY,nx,ny),
 		 DATA_TYPE POLYBENCH_1D(_fict_,TMAX,tmax))
 {
-  int i, j;
+  long long i, j;
 
   for (i = 0; i < tmax; i++)
     _fict_[i] = (DATA_TYPE) i;
@@ -45,7 +45,7 @@ void print_array(int nx,
 		 DATA_TYPE POLYBENCH_2D(ey,NX,NY,nx,ny),
 		 DATA_TYPE POLYBENCH_2D(hz,NX,NY,nx,ny))
 {
-  int i, j;
+  long long i, j;
 
   POLYBENCH_DUMP_START;
   POLYBENCH_DUMP_BEGIN("ex");

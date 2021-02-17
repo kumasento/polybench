@@ -23,7 +23,7 @@ void init_array (int n,
                  base POLYBENCH_1D(seq,N,n),
 		 DATA_TYPE POLYBENCH_2D(table,N,N,n,n))
 {
-  int i, j;
+  long long i, j;
 
   //base is AGCT/0..3
   for (i=0; i <n; i++) {
@@ -43,7 +43,7 @@ void print_array(int n,
 		 DATA_TYPE POLYBENCH_2D(table,N,N,n,n))
 
 {
-  int i, j;
+  long long i, j;
   int t = 0;
 
   POLYBENCH_DUMP_START;
@@ -71,7 +71,7 @@ static
 void kernel_nussinov(int n, base POLYBENCH_1D(seq,N,n),
 			   DATA_TYPE POLYBENCH_2D(table,N,N,n,n))
 {
-  int i, j, k;
+  long long i, j, k;
 
 #pragma scop
  for (i = _PB_N-1; i >= 0; i--) {

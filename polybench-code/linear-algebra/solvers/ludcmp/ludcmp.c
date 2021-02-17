@@ -20,7 +20,7 @@ void init_array (int n,
 		 DATA_TYPE POLYBENCH_1D(x,N,n),
 		 DATA_TYPE POLYBENCH_1D(y,N,n))
 {
-  int i, j;
+  long long i, j;
   DATA_TYPE fn = (DATA_TYPE)n;
 
   for (i = 0; i < n; i++)
@@ -66,7 +66,7 @@ void print_array(int n,
 		 DATA_TYPE POLYBENCH_1D(x,N,n))
 
 {
-  int i;
+  long long i;
 
   POLYBENCH_DUMP_START;
   POLYBENCH_DUMP_BEGIN("x");
@@ -88,7 +88,7 @@ void kernel_ludcmp(int n,
 		   DATA_TYPE POLYBENCH_1D(x,N,n),
 		   DATA_TYPE POLYBENCH_1D(y,N,n))
 {
-  int i, j, k;
+  long long i, j, k;
 
   DATA_TYPE w;
 

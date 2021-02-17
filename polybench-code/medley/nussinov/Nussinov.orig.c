@@ -165,7 +165,7 @@ int getint(char *prompt)
 	char *terminate = "";
 #endif
 	int result;
-	int i=0;
+	long long i=0;
 	while (
 		fprintf(stderr, "%s%s", prompt, terminate),
 		result = scanf("%d", &i),
@@ -191,7 +191,7 @@ int main(int argc, char *argv[])
  	int size = getint("Enter length of random mRNA sequence (2200 is average for human mRNA): ");  // Average (human) mRNA length is 2200; there's one that's 5000, though
 #endif
 
-        int i, j, k=-1;
+        long long i, j, k=-1;
 	MAX_N_DECLS();
 	char *options;
 #if VERBOSE
